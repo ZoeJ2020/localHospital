@@ -25,16 +25,18 @@ mongoose.connect(process.env.MONGO_URI)
 //.then ONLY RUNS WHEN CONNECTION TO DATABASE IS ESTABLISHED
     .then(() => { 
     
-    //listen to port number for requests
-    app.listen(process.env.PORT, () => {
-    console.log('Connected to db & listening on port', process.env.PORT);
-})
+        //listen to port number for requests
+        app.listen(process.env.PORT, () => {
+        console.log('Connected to db & listening on port', process.env.PORT);
+        })
 
     })
 
     // find errors if they appear
     .catch((error) => {
+        
         console.log(error)
+    
     })
 
 
