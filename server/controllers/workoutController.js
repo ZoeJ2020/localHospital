@@ -41,7 +41,27 @@ const createWorkout = async (req, res) => {
         //get data from req
         const {title, load, reps} = req.body
 
-        //TRY to send data, CATCH errors if any exist
+        // for detecting empty fields and pushing messages
+        let emptyFields = []
+
+        if(!title){
+            emptyFields.push('title')
+        }
+
+        if(!load){
+            emptyFields.push('load')
+        }
+
+        if(!reps){
+            emptyFields.push('reps')
+        }
+
+        if(emptyFields.length > 0)
+        {
+            return res.status(400).json({error: 'Please fill in all the fields.', emptyFields})
+        }
+
+        //add doc to db, catch errors if arise
         try{
             //create new document with these properties
             const workout = await Workout.create({title, load, reps})
