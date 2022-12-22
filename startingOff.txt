@@ -1,3 +1,3 @@
-BEGIN FROM React App Creation - Episode 8 of Net Ninjs
+BEGIN FROM Deleting Data - Episode 12 of Net Ninjs
 
 // sign into mongodb using casual email account
