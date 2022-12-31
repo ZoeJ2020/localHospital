@@ -17,6 +17,10 @@ app.use((req, res, next) => {
 //gets workout routes
 const workoutRoutes = require('./routes/workouts')
 
+//get user route
+const userRoutes = require('./routes/user')
+app.use('/api/user', userRoutes)
+
 //use workout routes in specfic page in app
 app.use('/api/workouts', workoutRoutes)
 

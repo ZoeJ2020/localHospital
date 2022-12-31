@@ -1,3 +1,3 @@
-BEGIN FROM Deleting Data - Episode 12 of Net Ninjs
+BEGIN FROM - Episode __ of Net Ninja
 
 // sign into mongodb using casual email account

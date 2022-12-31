@@ -17,7 +17,6 @@ router.get('/', getWorkouts)
 //GET individual workouts
 router.get('/:id', getWorkout)
 
-
 // //POST a new workouts
 router.post('/', createWorkout)
 
